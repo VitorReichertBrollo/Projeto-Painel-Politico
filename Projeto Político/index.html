@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Painel Legislativo — Senado Federal</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/geral.css">
+    <link rel="stylesheet" href="css/topo.css">
+    <link rel="stylesheet" href="css/busca.css">
+    <link rel="stylesheet" href="css/parlamentares.css">
+
+</head>
+
+
+<body>
+
+    <header class="topo">
+
+        <div class="topo-selo">
+
+            <span class="selo-linha"></span>
+
+            <span class="selo-texto">
+                CongressoNacional
+            </span>
+
+            <span class="selo-linha"></span>
+
+        </div>
+
+
+        <h1 class="titulo">
+            Painel<br>Legislativo
+        </h1>
+
+
+        <p class="subtitulo">
+            Consulta pública de parlamentares — dados abertos do Senado Federal
+        </p>
+
+    </header>
+
+
+
+    <main>
+
+        <!-- BUSCA POR ESTADO -->
+
+        <section class="bloco">
+
+            <div class="bloco-cabecalho">
+
+                <span class="bloco-indice">01</span>
+
+                <div>
+
+                    <h2>Buscar por estado</h2>
+
+                    <p>
+                        Digite a sigla da unidade federativa para listar os senadores em exercício.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <form class="form-busca" id="form-uf">
+
+                <input
+                    id="estado"
+                    type="text"
+                    maxlength="2"
+                    placeholder="RS"
+                    autocomplete="off"
+                >
+
+                <button type="submit">
+                    Pesquisar
+                </button>
+
+            </form>
+
+
+            <p class="status" id="status-uf" hidden></p>
+
+            <div
+                class="grade-fichas"
+                id="resultados-uf">
+            </div>
+
+        </section>
+
+
+
+        <!-- BUSCA POR CÓDIGO -->
+
+        <section class="bloco">
+
+            <div class="bloco-cabecalho">
+
+                <span class="bloco-indice">02</span>
+
+                <div>
+
+                    <h2>Buscar por código</h2>
+
+                    <p>
+                        Digite o código do parlamentar para abrir o dossiê individual.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <form class="form-busca" id="form-parlamentar">
+
+                <input
+                    id="cd_parlamentar"
+                    type="text"
+                    placeholder="Ex.: 4981"
+                    autocomplete="off"
+                >
+
+                <button type="submit">
+                    Pesquisar
+                </button>
+
+            </form>
+
+
+            <p
+                class="status"
+                id="status-parlamentar"
+                hidden>
+            </p>
+
+
+            <div id="resultado-parlamentar"></div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- MODELO DA FICHA -->
+
+    <template id="modelo-ficha">
+
+        <a
+            class="ficha"
+            target="_blank"
+            rel="noopener">
+
+            <div class="ficha-foto">
+
+                <img alt="">
+
+            </div>
+
+
+            <div class="ficha-corpo">
+
+                <p class="ficha-partido-uf"></p>
+
+                <h3 class="ficha-nome"></h3>
+
+                <p class="ficha-codigo"></p>
+
+            </div>
+
+        </a>
+
+    </template>
+
+
+
+    <!-- MODELO DO DOSSIÊ -->
+
+    <template id="modelo-dossie">
+
+        <article class="dossie">
+
+            <div class="dossie-cabecalho">
+
+                <div class="dossie-foto">
+
+                    <img alt="">
+
+                </div>
+
+
+                <div class="dossie-identificacao">
+
+                    <p class="dossie-tratamento"></p>
+
+                    <h3 class="dossie-nome"></h3>
+
+                    <p class="dossie-partido-uf"></p>
+
+
+                    <dl class="dossie-meta">
+
+                        <div>
+                            <dt>Código</dt>
+                            <dd class="dossie-codigo"></dd>
+                        </div>
+
+                        <div>
+                            <dt>E-mail</dt>
+                            <dd class="dossie-email"></dd>
+                        </div>
+
+                        <div>
+                            <dt>Nascimento</dt>
+                            <dd class="dossie-nascimento"></dd>
+                        </div>
+
+                        <div>
+                            <dt>Naturalidade</dt>
+                            <dd class="dossie-naturalidade"></dd>
+                        </div>
+
+                    </dl>
+
+
+                    <a
+                        class="dossie-link"
+                        target="_blank"
+                        rel="noopener">
+
+                        Página oficial no Senado ↗
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="dossie-extra"></div>
+
+        </article>
+
+    </template>
+
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="js/funcoes.js"></script>
+    <script src="js/estado.js"></script>
+    <script src="js/parlamentar.js"></script>
+    <script src="js/eventos.js"></script>
+
+</body>
+
+</html>
