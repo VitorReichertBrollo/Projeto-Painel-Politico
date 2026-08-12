@@ -1,0 +1,93 @@
+.form-busca {
+
+    display: flex;
+
+    gap: .6rem;
+
+    flex-wrap: wrap;
+}
+
+
+.form-busca input {
+
+    flex: 1 1 220px;
+
+    min-width: 0;
+
+    padding: .8rem 1rem;
+
+    background: var(--papel);
+
+    border: 1px solid var(--linha);
+
+    border-radius: 3px;
+
+    color: var(--tinta);
+
+    font-family: var(--f-mono);
+
+    font-size: .95rem;
+
+    text-transform: uppercase;
+}
+
+
+.form-busca input::placeholder {
+
+    color: #9a927a;
+
+    text-transform: none;
+}
+
+
+.form-busca input:focus {
+
+    border-color: var(--marinho-2);
+}
+
+
+.form-busca button {
+
+    padding: .8rem 1.6rem;
+
+    background: var(--marinho);
+
+    color: var(--papel);
+
+    border: none;
+
+    border-radius: 3px;
+
+    font-family: var(--f-corpo);
+
+    font-weight: 600;
+
+    font-size: .92rem;
+
+    cursor: pointer;
+}
+
+
+.form-busca button:hover {
+
+    background: var(--marinho-2);
+}
+
+
+.status {
+
+    margin: 1rem 0 0;
+
+    color: var(--verde);
+
+    font-family: var(--f-mono);
+
+    font-size: .82rem;
+}
+
+
+.status.erro {
+
+    color: #8a3b2f;
+}
+

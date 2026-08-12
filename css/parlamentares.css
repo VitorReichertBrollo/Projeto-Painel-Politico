@@ -1,0 +1,304 @@
+/* FICHAS */
+
+.grade-fichas {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fill, minmax(240px, 1fr));
+
+    gap: 1rem;
+
+    margin-top: 1.75rem;
+}
+
+
+.ficha {
+
+    display: flex;
+
+    gap: .9rem;
+
+    padding: .9rem;
+
+    background: var(--papel);
+
+    border: 1px solid var(--linha);
+
+    border-radius: 3px;
+
+    color: inherit;
+
+    text-decoration: none;
+}
+
+
+.ficha:hover {
+
+    border-color: var(--latao);
+
+    transform: translateY(-2px);
+}
+
+
+.ficha-foto {
+
+    width: 56px;
+
+    height: 56px;
+
+    flex: none;
+
+    overflow: hidden;
+
+    background: var(--papel-alt);
+
+    border-radius: 2px;
+}
+
+
+.ficha-foto img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+.ficha-corpo {
+
+    min-width: 0;
+}
+
+
+.ficha-partido-uf {
+
+    margin: 0 0 .2rem;
+
+    color: var(--verde);
+
+    font-family: var(--f-mono);
+
+    font-size: .7rem;
+
+    letter-spacing: .06em;
+
+    text-transform: uppercase;
+}
+
+
+.ficha-nome {
+
+    margin: 0 0 .2rem;
+
+    font-family: var(--f-display);
+
+    font-size: 1rem;
+}
+
+
+.ficha-codigo {
+
+    margin: 0;
+
+    color: #8a8272;
+
+    font-family: var(--f-mono);
+
+    font-size: .72rem;
+}
+
+
+
+/* DOSSIÊ */
+
+.dossie {
+
+    margin-top: 1.75rem;
+
+    padding-top: 1.75rem;
+
+    border-top: 1px solid var(--linha);
+}
+
+
+.dossie-cabecalho {
+
+    display: flex;
+
+    gap: 1.5rem;
+
+    flex-wrap: wrap;
+}
+
+
+.dossie-foto {
+
+    width: 120px;
+
+    height: 150px;
+
+    flex: none;
+
+    overflow: hidden;
+
+    background: var(--papel);
+
+    border: 1px solid var(--linha);
+
+    border-radius: 2px;
+}
+
+
+.dossie-foto img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+.dossie-identificacao {
+
+    flex: 1 1 280px;
+
+    min-width: 0;
+}
+
+
+.dossie-tratamento {
+
+    margin: 0;
+
+    color: var(--verde);
+
+    font-family: var(--f-mono);
+
+    font-size: .72rem;
+
+    letter-spacing: .1em;
+
+    text-transform: uppercase;
+}
+
+
+.dossie-nome {
+
+    margin: .15rem 0 .25rem;
+
+    font-family: var(--f-display);
+
+    font-size: 1.7rem;
+
+    line-height: 1.1;
+}
+
+
+.dossie-partido-uf {
+
+    margin: 0 0 1rem;
+
+    color: #4b5245;
+
+    font-family: var(--f-mono);
+
+    font-size: .85rem;
+}
+
+
+.dossie-meta {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(140px, 1fr));
+
+    gap: .8rem 1.5rem;
+
+    margin: 0 0 1rem;
+}
+
+
+.dossie-meta dt {
+
+    margin-bottom: .15rem;
+
+    color: #9a927a;
+
+    font-family: var(--f-mono);
+
+    font-size: .68rem;
+
+    letter-spacing: .08em;
+
+    text-transform: uppercase;
+}
+
+
+.dossie-meta dd {
+
+    margin: 0;
+
+    font-size: .92rem;
+}
+
+
+.dossie-link {
+
+    color: var(--marinho);
+
+    font-size: .88rem;
+
+    font-weight: 600;
+
+    text-decoration: none;
+
+    border-bottom: 1px solid var(--latao);
+}
+
+
+.dossie-link:hover {
+
+    color: var(--marinho-2);
+}
+
+
+.dossie-extra {
+
+    min-height: 2rem;
+
+    margin-top: 1.75rem;
+
+    padding-top: 1.5rem;
+
+    color: #4b5245;
+
+    border-top: 1px dashed var(--linha);
+}
+
+
+@media (max-width: 560px) {
+
+    .dossie-cabecalho {
+
+        flex-direction: column;
+    }
+
+
+    .dossie-foto {
+
+        width: 100px;
+
+        height: 125px;
+    }
+
+}
+
